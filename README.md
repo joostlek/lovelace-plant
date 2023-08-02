@@ -2,15 +2,11 @@
 
 A community driven boilerplate of best practices for Home Assistant Lovelace custom cards
 
-[![GitHub Release][releases-shield]][releases]
-[![License][license-shield]](LICENSE.md)
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge)](https://github.com/custom-components/hacs)
+[![GitHub Release][releases-shield]][releases] [![License][license-shield]](LICENSE.md) [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge)](https://github.com/custom-components/hacs)
 
-![Project Maintenance][maintenance-shield]
-[![GitHub Activity][commits-shield]][commits]
+![Project Maintenance][maintenance-shield] [![GitHub Activity][commits-shield]][commits]
 
-[![Discord][discord-shield]][discord]
-[![Community Forum][forum-shield]][forum]
+[![Discord][discord-shield]][discord] [![Community Forum][forum-shield]][forum]
 
 ## Support
 
@@ -33,15 +29,15 @@ Hey dude! Help me out for a couple of :beers: or a :coffee:!
 
 ## Action Options
 
-| Name            | Type   | Requirement  | Description                                                                                                                            | Default     |
-| --------------- | ------ | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| action          | string | **Required** | Action to perform (more-info, toggle, call-service, navigate url, none)                                                                | `more-info` |
-| navigation_path | string | **Optional** | Path to navigate to (e.g. /lovelace/0/) when action defined as navigate                                                                | `none`      |
-| url             | string | **Optional** | URL to open on click when action is url. The URL will open in a new tab                                                                | `none`      |
-| service         | string | **Optional** | Service to call (e.g. media_player.media_play_pause) when action defined as call-service                                               | `none`      |
-| service_data    | object | **Optional** | Service data to include (e.g. entity_id: media_player.bedroom) when action defined as call-service                                     | `none`      |
-| haptic          | string | **Optional** | Haptic feedback _success, warning, failure, light, medium, heavy, selection_ | `none`      |
-| repeat          | number | **Optional** | How often to repeat the `hold_action` in milliseconds.                                                                                 | `none`       |
+| Name | Type | Requirement | Description | Default |
+| --- | --- | --- | --- | --- |
+| action | string | **Required** | Action to perform (more-info, toggle, call-service, navigate url, none) | `more-info` |
+| navigation_path | string | **Optional** | Path to navigate to (e.g. /lovelace/0/) when action defined as navigate | `none` |
+| url | string | **Optional** | URL to open on click when action is url. The URL will open in a new tab | `none` |
+| service | string | **Optional** | Service to call (e.g. media_player.media_play_pause) when action defined as call-service | `none` |
+| service_data | object | **Optional** | Service data to include (e.g. entity_id: media_player.bedroom) when action defined as call-service | `none` |
+| haptic | string | **Optional** | Haptic feedback _success, warning, failure, light, medium, heavy, selection_ | `none` |
+| repeat | number | **Optional** | How often to repeat the `hold_action` in milliseconds. | `none` |
 
 ## Starting a new card from boilerplate-card
 
@@ -51,13 +47,11 @@ Click the "Use this template" button on the main page and clone the new reposito
 
 ### Step 2
 
-Install necessary modules (verified to work in node 8.x)
-`yarn install` or `npm install`
+Install necessary modules (verified to work in node 8.x) `yarn install` or `npm install`
 
 ### Step 3
 
-Do a test lint & build on the project. You can see available scripts in the package.json
-`npm run build`
+Do a test lint & build on the project. You can see available scripts in the package.json `npm run build`
 
 ### Step 4
 
@@ -73,10 +67,8 @@ Note: this is available only in vscode ensure you have the [Remote Containers](h
 
 1. Fork and clone the repository.
 2. Open a [devcontainer][devcontainer] terminal and run `npm start` when it's ready.
-3. The compiled `.js` file will be accessible on
-   `http://127.0.0.1:5000/boilerplate-card.js`.
-4. On a running Home Assistant installation add this to your Lovelace
-   `resources:`
+3. The compiled `.js` file will be accessible on `http://127.0.0.1:5000/boilerplate-card.js`.
+4. On a running Home Assistant installation add this to your Lovelace `resources:`
 
 ```yaml
 - url: 'http://127.0.0.1:5000/boilerplate-card.js'

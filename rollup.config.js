@@ -40,11 +40,11 @@ const plugins = [
 
 export default [
   {
-    input: 'src/button-card.ts',
+    input: 'src/plant-card.ts',
     output: {
       dir: './dist',
       format: 'es',
-      sourcemap: dev ? true : false,
+      sourcemap: !!dev,
     },
     plugins: [...plugins],
     watch: {
