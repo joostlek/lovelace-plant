@@ -40,7 +40,7 @@ const plugins = [
 
 export default [
   {
-    input: 'src/plant-card.ts',
+    input: 'src/button-card.ts',
     output: {
       dir: './dist',
       format: 'es',
