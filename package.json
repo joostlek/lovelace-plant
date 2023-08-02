@@ -67,7 +67,7 @@
     "fast-copy": "3.0.1",
     "home-assistant-js-websocket": "8.2.0",
     "lit": "2.7.6",
-    "lit-element": "3.3.2",
+    "lit-element": "3.3.3",
     "lit-html": "2.7.5",
     "memoize-one": "6.0.0"
   }
