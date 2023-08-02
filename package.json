@@ -2,11 +2,11 @@
   "name": "lovelace-plant",
   "version": "0.0.1",
   "description": "Plant card for lovelace",
-  "main": "dist/button-card.js",
+  "main": "dist/test-card.js",
   "scripts": {
     "build": "npm run lint && npm run rollup",
     "rollup": "rollup -c",
-    "babel": "babel dist/button-card.js --out-file dist/button-card.js",
+    "babel": "babel dist/test-card.js --out-file dist/test-card.js",
     "lint": "eslint src/*.ts",
     "watch": "rollup -c --watch",
     "postversion": "npm run build",
