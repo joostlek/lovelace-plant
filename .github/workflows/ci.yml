@@ -22,9 +22,8 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
-          key: ${{ runner.OS }}-node-18.x-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.OS }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.OS }}-node-18.x
             ${{ runner.OS }}-
       - name: Install dependencies
         run: yarn install --frozen-lockfile
@@ -33,23 +32,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18]
-
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3.6.0
+      - name: Setup Node
+        uses: actions/setup-node@v3.7.0
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version-file: '.nvmrc'
+          cache: yarn
       - name: Cache Node.js modules
         uses: actions/cache@v3
         with:
           path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
-          key: ${{ runner.OS }}-node-${{ matrix.node-version }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.OS }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.OS }}-node-${{ matrix.node-version }}
             ${{ runner.OS }}-
       - name: Install dependencies
         run: yarn install --frozen-lockfile

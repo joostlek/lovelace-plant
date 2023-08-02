@@ -22,9 +22,8 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
-          key: ${{ runner.OS }}-node-18.x-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.OS }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.OS }}-node-18.x
             ${{ runner.OS }}-
       - name: Install dependencies
         run: yarn install --frozen-lockfile
