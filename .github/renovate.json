@@ -10,12 +10,12 @@
   "commitMessagePrefix": "⬆️",
   "packageRules": [
     {
-      "matchManagers": ["yarn", "nvm"],
+      "matchManagers": ["npm", "nvm"],
       "addLabels": ["javascript"],
       "rangeStrategy": "pin"
     },
     {
-      "matchManagers": ["yarn", "nvm"],
+      "matchManagers": ["npm", "nvm"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
     },
