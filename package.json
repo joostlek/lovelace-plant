@@ -59,7 +59,7 @@
     "ts-lit-plugin": "1.2.1",
     "typescript": "5.2.2",
     "typescript-styled-plugin": "0.18.3",
-    "yarn-audit-fix": "9.3.12"
+    "yarn-audit-fix": "10.0.7"
   },
   "dependencies": {
     "@ctrl/tinycolor": "3.6.1",
